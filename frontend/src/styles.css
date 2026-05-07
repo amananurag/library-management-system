@@ -1,0 +1,141 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  background: #f7f7fa;
+  color: #1f1f29;
+}
+
+* { box-sizing: border-box; }
+
+a { color: #3454d1; }
+
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e5ee;
+}
+
+.app-header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.app-header .user-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #c8c8d4;
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+button:hover:not(:disabled) { border-color: #3454d1; }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+button.primary {
+  background: #3454d1;
+  border-color: #3454d1;
+  color: #fff;
+}
+button.danger {
+  background: #fff;
+  border-color: #d13434;
+  color: #d13434;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e5e5ee;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e5e5ee;
+}
+.tabs button {
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 10px 16px;
+}
+.tabs button.active {
+  color: #3454d1;
+  border-bottom-color: #3454d1;
+  font-weight: 600;
+}
+
+.form { display: flex; flex-direction: column; gap: 12px; max-width: 360px; }
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: #555;
+}
+.form input {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #c8c8d4;
+  border-radius: 6px;
+}
+
+.error {
+  color: #b00020;
+  background: #fdecee;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.books-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.books-table th, .books-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #ececf3;
+  vertical-align: middle;
+}
+.books-table th { font-weight: 600; color: #444; background: #fafafe; }
+
+.status-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.status-pill.available { background: #e6f5e9; color: #1a7a35; }
+.status-pill.checked_out { background: #fdecdf; color: #aa530b; }
+
+@media (max-width: 600px) {
+  .app-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .books-table th, .books-table td { padding: 8px; }
+  .books-table { font-size: 13px; }
+}
