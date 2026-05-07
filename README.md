@@ -200,12 +200,3 @@ npm run clean:root   # just root node_modules
 
 
 
-
-## Pushing to GitHub
-
-```bash
-cd library-management-system
-git add .
-git commit -m "Initial Library Management System (React + Express + SQLite)"
-
-
