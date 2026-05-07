@@ -210,6 +210,6 @@ git commit -m "Initial Library Management System (React + Express + SQLite)"
 
 # create a public/private repo named library-management-system on GitHub, then:
 git branch -M main
-git remote add origin git@github.com:<you>/library-management-system.git
+git remote add origin git@github.com:amananurag/library-management-system.git
 git push -u origin main
 ```
